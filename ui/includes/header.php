@@ -275,8 +275,9 @@
               <li><a href="afficher-typ-local.php">Typ local</a></li>
               <li><a href="afficher-theme.php">Theme</a></li>
               <li><a href="afficher-structure.php">Structure</a></li>
-              <li><a href="afficher-fonction.php">fonction</a></li>
+              <li><a href="afficher-fonction.php">Fonction</a></li>
               <li><a href="afficher-agent.php">Agent</a></li>
+              <li><a href="afficher-ordre-mission.php">Ordre Mission</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -295,6 +296,7 @@
               <li><a href="ajouter-structure.php">Structure</a></li>
               <li><a href="ajouter-fonction.php">fonction</a></li>
               <li><a href="ajouter-agent.php">Agent</a></li>
+              <li><a href="ajouter-ordre-mission.php">ordre mission</a></li>
               <li><a href="advanced_form_components.html">Advanced Components</a></li>
               <li><a href="form_validation.html">Form Validation</a></li>
               <li><a href="contactform.html">Contact Form</a></li>
