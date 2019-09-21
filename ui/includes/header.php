@@ -278,6 +278,8 @@
               <li><a href="afficher-fonction.php">Fonction</a></li>
               <li><a href="afficher-agent.php">Agent</a></li>
               <li><a href="afficher-ordre-mission.php">Ordre Mission</a></li>
+              <li><a href="afficher-typ-frai.php">Typ_Frai</a></li>
+              <li><a href="afficher-pris-charge.php">Pris Charge</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -297,6 +299,8 @@
               <li><a href="ajouter-fonction.php">fonction</a></li>
               <li><a href="ajouter-agent.php">Agent</a></li>
               <li><a href="ajouter-ordre-mission.php">ordre mission</a></li>
+              <li><a href="ajouter-typ-frai.php">Typ_Frai</a></li>
+              <li><a href="ajouter-pris-charge.php">Pris Charge</a></li>
               <li><a href="advanced_form_components.html">Advanced Components</a></li>
               <li><a href="form_validation.html">Form Validation</a></li>
               <li><a href="contactform.html">Contact Form</a></li>
