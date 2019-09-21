@@ -26,7 +26,6 @@ $formation = $mysql->query(
               <tr>
                 <th>#</th>
                 <th>cod_for</th>
-                <th>des_pl_for</th>
                 <th>dat_deb</th>
                 <th>dat_fin</th>
                 <th>obs</th>
@@ -41,7 +40,6 @@ $formation = $mysql->query(
                 <tr>
                   <td><?= $i; ?></td>
                   <td><?= $rows['cod_for']; ?></td>
-                  <td><?= $rows['des_pl_for']; ?></td>
                   <td><?= $rows['dat_deb']; ?></td>
                   <td><?= $rows['dat_fin']; ?></td>
                   <td><?= $rows['obs']; ?></td>
