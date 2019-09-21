@@ -1,6 +1,6 @@
 <?php require './includes/header.php' ?>
 <?php
-  if (isset($_POST['ajouter-organism'])) {
+  if (isset($_POST['ajouter-typ-local'])) {
     // extract all prop of $_POST variable to independent variables
     array_pop($_POST);
     $fields = array_keys($_POST);
@@ -47,7 +47,7 @@
             <div class="form-group">
               <label class="col-lg-2 col-sm-2 control-label">Static control</label>
               <div class="col-lg-10">
-                <button type='submit' class='btn btn-success' name='ajouter-organism'>Ajouter</button>
+                <button type='submit' class='btn btn-success' name='ajouter-typ-local'>Ajouter</button>
               </div>
             </div>
           </form>
