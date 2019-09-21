@@ -275,22 +275,24 @@
               <li><a href="afficher-typ-local.php">Typ local</a></li>
               <li><a href="afficher-theme.php">Theme</a></li>
               <li><a href="afficher-structure.php">Structure</a></li>
+              <li><a href="afficher-fonction.php">fonction</a></li>
             </ul>
           </li>
           <li class="sub-menu">
             <a class="active" href="javascript:;">
               <i class="fa fa-tasks"></i>
-              <span>Forms</span>
+              <span>Ajouter</span>
               </a>
             <ul class="sub">
-              <li><a href="ajouter-organism.php">Ajouter Organism</a></li>
-              <li><a href="ajouter-typ-local.php">Ajouter Typ local</a></li>
-              <li><a href="ajouter-plan-formation.php">Ajouter Plan Formation</a></li>
-              <li><a href="ajouter-domain.php">Ajouter Domain</a></li>
-              <li><a href="ajouter-grade.php">Ajouter Grade</a></li>
-              <li><a href="ajouter-theme.php">Ajouter Theme</a></li>
-              <li><a href="ajouter-formation.php">Ajouter Formation</a></li>
-              <li><a href="ajouter-structure.php">Ajouter Structure</a></li>
+              <li><a href="ajouter-organism.php">Organism</a></li>
+              <li><a href="ajouter-typ-local.php">Typ local</a></li>
+              <li><a href="ajouter-plan-formation.php">Plan Formation</a></li>
+              <li><a href="ajouter-domain.php">Domain</a></li>
+              <li><a href="ajouter-grade.php">Grade</a></li>
+              <li><a href="ajouter-theme.php">Theme</a></li>
+              <li><a href="ajouter-formation.php">Formation</a></li>
+              <li><a href="ajouter-structure.php">Structure</a></li>
+              <li><a href="ajouter-fonction.php">fonction</a></li>
               <li><a href="advanced_form_components.html">Advanced Components</a></li>
               <li><a href="form_validation.html">Form Validation</a></li>
               <li><a href="contactform.html">Contact Form</a></li>
