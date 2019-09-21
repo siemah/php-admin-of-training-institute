@@ -280,6 +280,9 @@
               <li><a href="afficher-ordre-mission.php">Ordre Mission</a></li>
               <li><a href="afficher-typ-frai.php">Typ_Frai</a></li>
               <li><a href="afficher-pris-charge.php">Pris Charge</a></li>
+              <li><a href="afficher-planifier.php">Planifier</a></li>
+              <li><a href="afficher-benefier.php">Benefier</a></li>
+              <li><a href="afficher-remborcer.php">remborcer</a></li>
             </ul>
           </li>
           <li class="sub-menu">
@@ -301,6 +304,9 @@
               <li><a href="ajouter-ordre-mission.php">ordre mission</a></li>
               <li><a href="ajouter-typ-frai.php">Typ_Frai</a></li>
               <li><a href="ajouter-pris-charge.php">Pris Charge</a></li>
+              <li><a href="ajouter-planifier.php">Planifier</a></li>
+              <li><a href="ajouter-benefier.php">Benefier</a></li>
+              <li><a href="ajouter-remborcer.php">remborcer</a></li>
               <li><a href="advanced_form_components.html">Advanced Components</a></li>
               <li><a href="form_validation.html">Form Validation</a></li>
               <li><a href="contactform.html">Contact Form</a></li>
