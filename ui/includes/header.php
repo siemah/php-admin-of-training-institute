@@ -1,8 +1,15 @@
 <?php 
+  // utiliser les sessions
+  session_start();
+  // verifier si utilisateur a l'autorisation
+  if(!isset($_SESSION['user'])) 
+    header('Location: login.php');      
+
   // define a root directory
   define('ROOT_DIR', $_SERVER['DOCUMENT_ROOT']);
   // require a mysql class and initialize it to handle all db request
   require_once( ROOT_DIR . '/php-admin/utils/Mysql.php');
+
   $mysql = new Mysql('localhost', 'formation', 'root', '');
 
 
@@ -253,10 +260,9 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
-          <h5 class="centered">Sam Soffes</h5>
+          <h5 class="centered"><?= $_SESSION['user']['username'] ?></h5>
           <li class="mt">
-            <a href="index.html">
+            <a href="#">
               <i class="fa fa-dashboard"></i>
               <span>Dashboard</span>
               </a>
@@ -307,57 +313,7 @@
               <li><a href="ajouter-planifier.php">Planifier</a></li>
               <li><a href="ajouter-benefier.php">Benefier</a></li>
               <li><a href="ajouter-remborcer.php">remborcer</a></li>
-              <li><a href="advanced_form_components.html">Advanced Components</a></li>
-              <li><a href="form_validation.html">Form Validation</a></li>
-              <li><a href="contactform.html">Contact Form</a></li>
-              <li><a href="contactform.html">Contact Form</a></li>
             </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-th"></i>
-              <span>Data Tables</span>
-              </a>
-            <ul class="sub">
-              <li><a href="basic_table.html">Basic Table</a></li>
-              <li><a href="responsive_table.html">Responsive Table</a></li>
-              <li><a href="advanced_table.html">Advanced Table</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="inbox.html">
-              <i class="fa fa-envelope"></i>
-              <span>Mail </span>
-              <span class="label label-theme pull-right mail-info">2</span>
-              </a>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class=" fa fa-bar-chart-o"></i>
-              <span>Charts</span>
-              </a>
-            <ul class="sub">
-              <li><a href="morris.html">Morris</a></li>
-              <li><a href="chartjs.html">Chartjs</a></li>
-              <li><a href="flot_chart.html">Flot Charts</a></li>
-              <li><a href="xchart.html">xChart</a></li>
-            </ul>
-          </li>
-          <li class="sub-menu">
-            <a href="javascript:;">
-              <i class="fa fa-comments-o"></i>
-              <span>Chat Room</span>
-              </a>
-            <ul class="sub">
-              <li><a href="lobby.html">Lobby</a></li>
-              <li><a href="chat_room.html"> Chat Room</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="google_maps.html">
-              <i class="fa fa-map-marker"></i>
-              <span>Google Maps </span>
-              </a>
           </li>
         </ul>
         <!-- sidebar menu end-->
