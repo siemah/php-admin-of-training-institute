@@ -55,7 +55,7 @@
      * @return {Array} List if there is data to get or associate Array or 
      * false in case there not data to retrieve  
      */
-    public function query(string $sql, $fetchAll=true, array $options=[]): array {
+    public function query(string $sql, $fetchAll=true, array $options=[]) {
       
       $sth = $this
                 ->getPdo()
