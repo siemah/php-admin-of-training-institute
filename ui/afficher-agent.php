@@ -1,6 +1,17 @@
 <?php require './includes/header.php' ?>
 <?php
 
+// supprimer un agent 
+if (isset($_GET['action'], $_GET['id'])) {
+  $res = $mysql->query('DELETE FROM agent WHERE mat_agn = ?', true, [
+    'whereFieldsValues' => [$_GET['id']],
+  ]);
+  if ($res['isUpdated'])
+    $message['success'] = "Agent a ete ajoutee";
+  else
+    $message['danger'] = "Y'a un probleme";
+}
+
 // recuperer la list des domaines
 $agents = $mysql->query(
   'SELECT `mat_agn`, `nom_agn`, `prn_agn`, `sex`, `dat_tran`, `des_fon`, `des_str` 
@@ -20,6 +31,11 @@ $agents = $mysql->query(
     <div class="row">
       <div class="col-md-12">
         <div class="content-panel">
+          <?php if (isset($message)) : ?>
+            <?php foreach ($message as $kind => $alert) { ?>
+              <div class="alert alert-<?= $kind ?>"><?= $alert ?></div>
+            <?php } ?>
+          <?php endif; ?>
           <table class="table table-hover">
             <thead>
               <tr>
@@ -31,6 +47,7 @@ $agents = $mysql->query(
                 <th>dat_tran</th>
                 <th>des_fon</th>
                 <th>des_str</th>
+                <th>actions</th>
               </tr>
             </thead>
             <tbody>
@@ -45,8 +62,15 @@ $agents = $mysql->query(
                   <td><?= $rows['dat_tran']; ?></td>
                   <td><?= $rows['des_fon']; ?></td>
                   <td><?= $rows['des_str']; ?></td>
+                  <td>
+                    <form action='#'>
+                      <input type="hidden" name="id" value="<?= $rows['mat_agn']; ?>">
+                      <button type="submit" name='action' value="supprimer" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                    </form>
+                  </td>
                 </tr>
-              <?php $i++; endforeach; ?>
+              <?php $i++;
+              endforeach; ?>
             </tbody>
           </table>
         </div>
