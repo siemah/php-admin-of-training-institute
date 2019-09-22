@@ -7,7 +7,7 @@ if (isset($_GET['action'], $_GET['id'])) {
     'whereFieldsValues' => [$_GET['id']],
   ]);
   if ($res['isUpdated'])
-    $message['success'] = "Agent a ete ajoutee";
+    $message['success'] = "Agent a ete supprime";
   else
     $message['danger'] = "Y'a un probleme";
 }

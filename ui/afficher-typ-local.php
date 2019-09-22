@@ -1,6 +1,15 @@
 <?php require './includes/header.php' ?>
 <?php
-  
+   // supprimer local 
+   if (isset($_GET['action'], $_GET['id'])) {
+    $res = $mysql->query('DELETE FROM Typ_local WHERE cod_ty_loc = ?', true, [
+      'whereFieldsValues' => [$_GET['id']],
+    ]);
+    if ($res['isUpdated'])
+      $message['success'] = "Typ_local a ete supprime";
+    else
+      $message['danger'] = "Y'a un probleme";
+  }
   // recuperer la list des domaines
   $typ_local = $mysql->find(
     ['cod_ty_loc', 'des_ty_loc'],
@@ -17,12 +26,18 @@
         <div class="row">
           <div class="col-md-12">
             <div class="content-panel">
+              <?php if(isset($message)): ?>
+                <?php foreach ($message as $kind => $alert) { ?>
+                    <div class="alert alert-<?= $kind ?>"><?= $alert ?></div>
+                  <?php } ?>
+              <?php endif; ?>
               <table class="table table-hover">
                 <thead>
                   <tr>
                     <th>#</th>
                     <th>cod_ty_loc</th>
                     <th>des_ty_loc</th>
+                    <th>action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -31,6 +46,12 @@
                       <td><?= $i; ?></td>
                       <td><?= $rows['cod_ty_loc']; ?></td>
                       <td><?= $rows['des_ty_loc']; ?></td>
+                      <td>
+                      <form action='#'>
+                        <input type="hidden" name="id" value="<?= $rows['cod_ty_loc']; ?>">
+                        <button type="submit" name='action' value="supprimer" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                      </form>
+                      </td>
                     </tr>
                   <?php $i++; endforeach; ?>
                 </tbody>
